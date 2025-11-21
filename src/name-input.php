@@ -1,3 +1,7 @@
+<?php
+	// Cookie time
+	setcookie("name", $_POST["name"],0,"/");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,5 +12,7 @@
 	</head>
 	<body>
 		<h1>Welcome <?php echo $_POST["name"]; ?></h1>
+		
+		
 	</body>
 </html>
