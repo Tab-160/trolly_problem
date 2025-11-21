@@ -1,7 +1,3 @@
-<?php
-	// Cookie time
-	setcookie("name", $_POST["name"],0,"/");
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,6 +7,10 @@
 		<link href="../img/Logo%208.svg" rel="shortcut icon"/>
 	</head>
 	<body>
-		<h1>Welcome <?php echo $_POST["name"]; ?></h1>
+		<h1>Question 1</h1>
+		<div class="image">
+			<img src="../img/q1.jpg" style="width: 50vw;">
+		</div>
+		<p>You Pulled the Lever!</p>
 	</body>
 </html>
