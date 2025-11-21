@@ -22,7 +22,10 @@ services:
             - "5432:5432"
         restart: always
         environment:
+			#server: db
+			#username: postgres
             POSTGRES_PASSWORD: example
+			#database: postgres
         volumes:
             - ./src:/src
         networks:
