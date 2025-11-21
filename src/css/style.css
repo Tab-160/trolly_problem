@@ -1,0 +1,47 @@
+:root {
+	/*Defining colors*/
+	--blue: #A3CEF1;
+	--red: #F9B9C3;
+	--green: #C1D7C1;
+	--purple: #CBB2E6;
+	--black: #0D1321;
+	--white: #FEF6EC;
+	
+	/*--logo-div-width: 100%;
+	--logo-img-width: 25vw;*/
+}
+
+@font-face {
+	font-family: "American Typewriter";
+	src: local("American Typewriter"), url("American Typewriter Regular.ttf");
+}
+
+html,
+body {
+    background: var(--green);
+	height: 100%;
+	transition: all 2s ease-in-out;
+	/*transition: left 2s ease-in-out, width 2s ease-in-out, top 2s ease-in-out;*/
+	transition-delay: 0s, 0s, 0s;
+}
+
+.everything{
+	
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: var(--black);
+	font-family: "American Typewriter";
+}
+
+p {
+	color: var(--black);
+	font-family: "American Typewriter";
+}
+
