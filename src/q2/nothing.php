@@ -11,7 +11,7 @@
 		<div class="image">
 			<img src="../img/q1.jpg" style="width: 50vw;">
 		</div>
-		<p>You Pulled the Lever!</p>
+		<p>You Did Nothing!</p>
 		<?php
 			// grab the name of the user
 			$name = $_COOKIE["name"];
@@ -23,16 +23,13 @@
 			$score = (int)pg_fetch_row($result)[0];
 			
 			// incriment score the correct amount
-			$score += 1;
+			$score += 5;
 		
 			// send score to the database
 			pg_query($dbconn, "UPDATE users SET score=$score WHERE name='$name'");
 
 			pg_close($dbconn);
 		?>
-		<div class="options">
-			<button onclick="location.href='../q2/';">Next Question</button>
-		</div>
-		
+		<button href="../q2/">Next</button>
 	</body>
 </html>

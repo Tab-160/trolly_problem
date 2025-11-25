@@ -62,3 +62,9 @@ form {
 	justify-content: center;
 	font-family: "American Typewriter";
 }
+
+button {
+	display: flex;
+	justify-content: center;
+	font-family: "American Typewriter";
+}

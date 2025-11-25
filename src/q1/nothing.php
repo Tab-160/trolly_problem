@@ -30,5 +30,8 @@
 
 			pg_close($dbconn);
 		?>
+		<div class="options">
+			<button onclick="location.href='../q2/';">Next Question</button>
+		</div>
 	</body>
 </html>
