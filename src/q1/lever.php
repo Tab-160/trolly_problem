@@ -12,5 +12,23 @@
 			<img src="../img/q1.jpg" style="width: 50vw;">
 		</div>
 		<p>You Pulled the Lever!</p>
+		<?php
+			// grab the name of the user
+			$name = $_COOKIE["name"];
+			// connect to database
+			$dbconn = pg_connect("host=host.docker.internal port=5432 dbname=postgres user=postgres password=example");
+		
+			// grab score of the current user and store as an int
+			$result = pg_query($dbconn, "SELECT score FROM users WHERE name='$name'");
+			$score = (int)pg_fetch_row($result)[0];
+			
+			// incriment score the correct amount
+			$score += 1;
+		
+			// send score to the database
+			pg_query($dbconn, "UPDATE users SET score=$score WHERE name='$name'");
+
+			pg_close($dbconn);
+		?>
 	</body>
 </html>
