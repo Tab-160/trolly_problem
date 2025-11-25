@@ -14,6 +14,11 @@
 		<p>You Did Nothing!</p>
 		<?php
 			echo $_COOKIE["name"];
+		
+			$dbconn = pg_connect("host=host.docker.internal port=5432 dbname=postgres user=postgres password=example");
+			echo pg_query($dbconn, "SELECT * FROM users");
+				
+			pg_close($dbconn);
 		?>
 	</body>
 </html>
