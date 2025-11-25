@@ -28,7 +28,7 @@ services:
             #database: postgres
         volumes:
             - ./src:/src
-            - ./postgres-data:/var/lib/postgresql/data
+            #- ./postgres-data:/var/lib/postgresql/data
         networks:
             - code-network
         #healthcheck:
