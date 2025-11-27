@@ -1,6 +1,17 @@
 <?php
+	// grab the name
+	$name = $_POST["name"];
+
 	// Cookie time
-	setcookie("name", $_POST["name"],0,"/");
+	setcookie("name", $name, 0, "/");
+
+	// connect to database
+	$dbconn = pg_connect("host=host.docker.internal port=5432 dbname=postgres user=postgres password=example");
+
+	// add name to database
+	pg_query($dbconn, "INSERT INTO users (name, score) VALUES ('$name', 0);");
+
+	pg_close($dbconn);
 ?>
 <!DOCTYPE html>
 <html>

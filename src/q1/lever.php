@@ -15,6 +15,7 @@
 		<?php
 			// grab the name of the user
 			$name = $_COOKIE["name"];
+		
 			// connect to database
 			$dbconn = pg_connect("host=host.docker.internal port=5432 dbname=postgres user=postgres password=example");
 		
@@ -27,6 +28,8 @@
 		
 			// send score to the database
 			pg_query($dbconn, "UPDATE users SET score=$score WHERE name='$name'");
+			// and update the count
+			pg_query($dbconn, "INSERT INTO questions(q_num, name, pulled_lever) VALUES (1, '$name', true);");
 
 			pg_close($dbconn);
 		?>

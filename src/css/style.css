@@ -46,10 +46,9 @@ p {
 	justify-content: center;
 }
 
-.image {
+.image, .piechart {
 	display: flex;
 	justify-content: center;
-	
 }
 
 .options {

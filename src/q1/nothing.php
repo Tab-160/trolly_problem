@@ -27,6 +27,8 @@
 		
 			// send score to the database
 			pg_query($dbconn, "UPDATE users SET score=$score WHERE name='$name'");
+			// and update the count
+			pg_query($dbconn, "INSERT INTO questions(q_num, name, pulled_lever) VALUES (1, '$name', false);");
 
 			pg_close($dbconn);
 		?>
