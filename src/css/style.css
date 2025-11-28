@@ -41,12 +41,19 @@ h6 {
 
 p {
 	color: var(--black);
+	font-size: 10vh;
 	font-family: "American Typewriter";
 	display: flex;
 	justify-content: center;
 }
 
 .image, .piechart {
+	display: flex;
+	justify-content: center;
+}
+
+.results {
+	font-family: "American Typewriter";
 	display: flex;
 	justify-content: center;
 }
@@ -66,4 +73,6 @@ button {
 	display: flex;
 	justify-content: center;
 	font-family: "American Typewriter";
+	
+	font-size: 8vh;
 }
