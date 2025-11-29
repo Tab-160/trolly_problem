@@ -24,7 +24,7 @@
 			$score = (int)pg_fetch_row($result)[0];
 			
 			// incriment score the correct amount
-			$score += 1;
+			$score += 0;
 		
 			// send score to the database
 			pg_query($dbconn, "UPDATE users SET score=$score WHERE name='$name'");
@@ -33,6 +33,8 @@
 
 			pg_close($dbconn);
 		?>
-		
+		<div class="options">
+			<button onclick="location.href='./lever_math.php';">Do not hit this button yet</button>
+		</div>
 	</body>
 </html>

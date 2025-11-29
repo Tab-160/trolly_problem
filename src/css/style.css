@@ -53,6 +53,7 @@ p {
 }
 
 .results {
+	font-size: 7vh;
 	font-family: "American Typewriter";
 	display: flex;
 	justify-content: center;
