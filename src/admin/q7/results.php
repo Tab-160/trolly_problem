@@ -30,8 +30,8 @@
 						$dbconn = pg_connect("host=host.docker.internal port=5432 dbname=postgres user=postgres password=example");
 					
 						//grab pulled lever amount
-						$num_pulled_query = pg_query($dbconn, "SELECT COUNT(name) FROM questions WHERE q_num=1 AND pulled_lever=true");
-						$num_not_pulled_query = pg_query($dbconn, "SELECT COUNT(name) FROM questions WHERE q_num=1 AND pulled_lever=false");
+						$num_pulled_query = pg_query($dbconn, "SELECT COUNT(name) FROM questions WHERE q_num=7 AND pulled_lever=true");
+						$num_not_pulled_query = pg_query($dbconn, "SELECT COUNT(name) FROM questions WHERE q_num=7 AND pulled_lever=false");
 					
 						$num_pulled = (int)pg_fetch_row($num_pulled_query)[0];
 						$num_not_pulled = (int)pg_fetch_row($num_not_pulled_query)[0];
