@@ -23,5 +23,8 @@
 	</head>
 	<body>
 		<h1>Welcome <?php echo $_POST["name"]; ?></h1>
+        <div class="options">
+			<button onclick="location.href='../q1/';">First Question</button>
+		</div>
 	</body>
 </html>
